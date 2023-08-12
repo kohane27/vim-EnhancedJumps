@@ -152,11 +152,11 @@ function! EnhancedJumps#Go( JumpFuncref, isNewer, filter )
 "****D echomsg '****' l:count l:jumpCount
     if empty(l:targetJump)
   let l:countMax = len(l:jumps)
-  if l:countMax == 0
-      call ingo#err#Set(printf('No %s%s jump position', l:jumpDirection, l:filterName), 'EnhancedJumps')
-  else
-      call ingo#err#Set(printf('Only %d %s%s jump position%s', l:countMax, l:jumpDirection, l:filterName, (l:countMax > 1 ? 's' : '')), 'EnhancedJumps')
-  endif
+  " if l:countMax == 0
+  "     call ingo#err#Set(printf('No %s%s jump position', l:jumpDirection, l:filterName), 'EnhancedJumps')
+  " else
+  "     call ingo#err#Set(printf('Only %d %s%s jump position%s', l:countMax, l:jumpDirection, l:filterName, (l:countMax > 1 ? 's' : '')), 'EnhancedJumps')
+  " endif
 
   " We still execute the actual jump command, even though we've determined
   " that it won't work. The jump command will still cause the customary
